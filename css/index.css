@@ -1,0 +1,490 @@
+/* 页面的样式表 */
+/* banner */
+.banner {
+    height: 500px;
+    background-color: #f5f5f5;
+}
+.banner .wrapper {
+    position: relative;
+    height: 500px;
+}
+/* 侧导航 */
+.banner .aside {
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 250px;
+    height: 500px;/* 透明度 */
+    background-color: rgba(0, 0, 0,.8);
+}
+.banner .aside li {
+    height: 50px;
+    line-height: 50px;/*行之间的间隔*/
+}
+/* 放文字的盒子大小和颜色 */
+.banner .aside li a {
+    position: relative;/* 宽度和父级是一样的 */
+    display: block;
+    height: 50px;
+    padding-left: 36px;
+    padding-right: 19px;
+    color: #fff;
+}
+.banner .aside li a span{
+    margin-left: 15px;
+    font-size: 14px;/*文字大小*/
+} 
+.banner .aside li a:hover {/* 鼠标悬停的颜色 */
+    background-color: #27ba9b;
+}
+.banner .aside li:last-child a {
+    position: relative;
+    padding-right: 35px; /* 为箭头留出空间 */
+}
+.banner .aside li a::after {/* 侧导航的箭头 */
+    content: "";
+    position: absolute;
+    right: 3px;
+    top: 53%;
+    transform: translateY(-50%);
+    width: 25px;  /* 箭头图标宽度 */
+    height: 25px; /* 箭头图标高度 */
+    background-image: url(../uploads/精灵图.PNG);
+    background-repeat: no-repeat;
+    background-size: 240px 221px;
+    background-position: -13px -32px;
+}
+/* 箭头 */
+.prev,
+.next {
+    position: absolute;
+    top: 228px;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(0, 0, 0,.2);
+    background-image: url(../uploads/精灵图.PNG);
+    border-radius: 50%;
+}
+.prev {
+    left: 260px;
+    background-position: 14px -58px;
+}
+.next {
+    right: 10px;
+    background-position: -23px -59px;
+}
+/* 圆点 */
+.banner ol{/* 圆点位置 */
+    position: absolute;
+    bottom: 30px;
+    left: 680px;
+    width: 200px;
+    height: 10px;
+}
+.banner ol li{
+    float: left;
+    margin-right: 24px;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255,0.4);/*圆点颜色*/
+    border-radius: 50%;/*圆点半径*/
+    cursor: pointer;/*鼠标经过圆点显示手型*/
+}
+/* 新鲜好物 */
+.goods{
+    width: 100%;
+    height: 522px;
+}
+.goods .title{
+    margin: 0 auto;
+    width: 1240px;
+    align-items: center;
+    height: 114px;
+    line-height: 114px;
+}
+.goods .title h2{
+    float: left;
+    font-size: 29px;
+    font-weight: 400;
+    height: 114px;
+}
+.goods .title h2 span{
+    margin-left: 34px;
+    font-size: 16px;
+    color: #999;
+}
+.goods .title a{
+    float: right;
+    color: #999;
+}
+.goods .title a::after { /* 箭头 */
+    content: '';
+    display: inline-block;
+    width: 14px;  /* 箭头图标宽度 */
+    height: 14px; /* 箭头图标高度 */
+    margin-left: 10px;
+    background-image: url(../uploads/精灵图.PNG);
+    background-position: 3px -109px;
+    vertical-align: middle;
+}
+.goods .content{
+    margin: 0 auto;
+    width: 1240px;
+    align-items: center;
+    height: 114px;
+    line-height: 114px;
+}
+
+.goods .content li{
+    float: left;
+    margin-right: 8px;
+    width: 304px;
+    height: 405px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+.goods .content li:last-child{
+    margin-right: 0;
+}
+.goods .content li img{
+    height: 304px;
+}
+.goods ul{
+  display: flex;
+  justify-content: space-between;
+}
+.goods ul li{
+  width: 304px;
+}
+.goods .price{
+  height: 70px; /* 【已修改】显著减小了高度，可以根据效果微调 */
+  padding: 52px 0; /* 【建议添加】增加上下内边距，使文字在缩小的高度内垂直居中 */
+  box-sizing: border-box; /* 【建议添加】确保padding包含在height内 */
+}
+.goods .content .price{
+  background-color: #EEF9F4;
+}
+.goods .price p{
+ text-align: center;
+  font-size: 29px; /* 【已修改】调小价格字体大小，更协调 */
+  color: #AA2113;
+  margin: 0; /* 【建议添加】移除默认外边距，更好地控制空间 */
+  line-height: 1.2; /* 【建议添加】控制行高，避免过大占用空间 */
+
+}
+.goods .price a{
+ display: block;
+  font-size: 23px; /* 【已修改】调小链接字体大小 */
+  margin-top: -31px; /* 【建议添加】给链接上方增加一点小间隔 */
+}
+
+/* 人气推荐 */
+.recommend{
+    width: 100%;
+    height: 522px;
+}
+.recommend .title{
+    margin: 0 auto;
+    width: 1240px;
+    align-items: center;
+    height: 114px;
+    line-height: 114px;
+}
+.recommend .title h2{
+    float: left;
+    font-size: 29px;
+    font-weight: 400;
+    height: 114px;
+}
+.recommend .title h2 span{
+    margin-left: 34px;
+    font-size: 16px;
+    color: #999;
+}
+.recommend .title a{
+    float: right;
+    color: #999;
+}
+.recommend .title a::after { /* 箭头 */
+    content: '';
+    display: inline-block;
+    width: 14px;  /* 箭头图标宽度 */
+    height: 14px; /* 箭头图标高度 */
+    margin-left: 10px;
+    background-image: url(../uploads/精灵图.PNG);
+    background-position: 3px -109px;
+    vertical-align: middle;
+}
+.recommend .content{
+    margin: 0 auto;
+    width: 1240px;
+    align-items: center;
+    height: 114px;
+    line-height: 114px;
+}
+
+.recommend .content li{
+    float: left;
+    margin-right: 8px;
+    width: 304px;
+    height: 304px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+.recommend .content li:last-child{
+    margin-right: 0;
+}
+.recommend .content li img{
+    height: 304px;
+}
+
+.recommend ul{
+  display: flex;
+  justify-content: space-between;
+}
+.recommend ul li{
+  width: 304px;
+}
+.recommend .price{
+  height: 70px; /* 【已修改】显著减小了高度，可以根据效果微调 */
+  padding: 52px 0; /* 【建议添加】增加上下内边距，使文字在缩小的高度内垂直居中 */
+  box-sizing: border-box; /* 【建议添加】确保padding包含在height内 */
+}
+
+.recommend .price p{
+ text-align: center;
+ font-size: 16px; /* 【已修改】调小价格字体大小，更协调 */
+ margin: 0; /* 【建议添加】移除默认外边距，更好地控制空间 */
+ line-height: 1.2; /* 【建议添加】控制行高，避免过大占用空间 */
+ color: #999;
+}
+.recommend .price a{
+ display: block;
+ font-size: 23px; /* 【已修改】调小链接字体大小 */
+ margin-top: -31px; /* 【建议添加】给链接上方增加一点小间隔 */
+}
+/* 热门品牌 */
+.brand{
+    width: 100%;
+    height: 446px;
+    background-color: #f1f1f1;
+}
+.brand .title{
+    margin: 0 auto;
+    width: 1240px;
+    align-items: center;
+    height: 114px;
+    line-height: 114px;
+}
+.brand .title h2{
+    float: left;
+    font-size: 29px;
+    font-weight: 400;
+    height: 114px;
+}
+.brand .title h2 span{
+    margin-left: 34px;
+    font-size: 16px;
+    color: #999;
+}
+.brand .content{
+    margin: 0 auto;
+    width: 1240px;
+    align-items: center;
+    height: 114px;
+    line-height: 114px;
+}
+
+.brand .content li{
+    float: left;
+    margin-right: 8px;
+    width: 304px;
+    height: 305px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+.brand .content li:last-child{
+    margin-right: 0;
+}
+.brand .content li img{
+    height: 304px;
+}
+
+.brand ul{
+  display: flex;
+  justify-content: space-between;
+}
+.brand ul li{
+  width: 304px;
+}
+/* 生鲜 */
+.fresh .wrapper{
+  width: 100%;
+  height: 735px;
+  margin: 0 auto;
+}
+.fresh .title{
+    position: relative;
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 1240px;
+    align-items: center;
+    height: 34px;
+    line-height: 24px;
+}
+.fresh .title h3{
+    display: block;
+    float: left;
+    font-size: 29px;
+    font-weight: 400;
+    height: 14px;
+    display: flex;
+}
+.fresh .title ul{
+  display: flex;
+  position: relative;
+  float: right;
+  margin-right: 60px;
+}
+.fresh .title ul a{
+  display: block;
+  color: #333;
+  padding: 0 7px;
+  margin-right: 6px;
+}
+.fresh .title ul a:hover{
+  background-color: #5EB69C;
+  color: #fff;
+}
+.title .all{
+    position: absolute;
+    right: 0;
+    color: #999;
+    display: flex;
+}
+.fresh .content{
+  display: flex;
+   margin: 0 auto;
+    width: 1240px;
+    align-items: center;
+    height: 684px;
+    line-height: 60px;
+}
+.fresh .content .left{
+  width: 248px;
+  height: 610px;
+  margin-right: 24px;
+}
+.fresh .content .right ul{
+  display: flex;
+  width: 968px;
+  flex-wrap: wrap;
+}
+.fresh .content .right li{
+  width: 242px;
+  height: 305px;
+  padding: 0 26px;
+}
+.fresh .content .right img{
+  width: 190px;
+  height: 171px;
+  margin: 14.5px 0;
+}
+.fresh .content .right a{
+  display: block;
+  width: 192px;
+  line-height: 19px;
+}
+.fresh .content .right span{
+  font-size: 22px;
+  line-height: 45px;
+  color: #AF2F22;
+}
+.fresh .content .right i{
+  font-size: 16px;
+  margin-right: 4px;
+}
+/* 最新专题 */
+.topic{
+  padding-top: 70px;
+}
+.topic .title a{
+    display: flex;
+    float: right;
+    color: #999;
+    margin-top: 8px;
+    margin-right: 25px;
+}
+.topic .title h3{
+    font-size: 30px;
+    display: block;
+    display: flex;
+    /* float: left; */
+}
+.topic .title{
+  margin: 30px 0;
+  position: relative;
+}
+
+.topic ul{
+  height: 395px;
+  display: flex;
+}
+.topic li img{
+    display: flex;
+  display: block;
+  width: 405px;
+  height: 288px;
+  margin-bottom: 23px;
+}
+.topic div{
+  position: relative;
+  display: flex;
+}
+.topic div span{
+  margin-left: 15px;
+  margin-right: 5px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.topic div .icon-fabulous i{
+  font-size: 14px;
+  margin-left: 18px;
+}
+.topic div .icon-browse i{
+  font-size: 14px;
+  margin-left: 18px;
+}
+.topic div .icon-comment i{
+  font-size: 14px;
+  margin-left: 18px;
+}
+.topic div .iconfont:last-child{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.icon-fabulous{
+  display: inline-block;
+  width: 40px;
+    background-image: url(../uploads/精灵图.PNG);
+    background-position: -120px -105px;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+}
+.icon-browse{
+  display: inline-block;
+  width: 40px;
+    background-image: url(../uploads/精灵图.PNG);
+    background-position: -200px -105px;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+}
+.icon-comment{
+  display: inline-block;
+  width: 40px;
+    background-image: url(../uploads/精灵图.PNG);
+    background-position: -160px -105px;
+    background-repeat: no-repeat;
+}
